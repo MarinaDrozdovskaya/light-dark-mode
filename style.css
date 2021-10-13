@@ -1,0 +1,44 @@
+@import './first-option-style.css';
+@import './second-option-style.css';
+@import './third-option-style.css';
+@import './forth-option-style.css';
+
+:root {
+    --white: #f0f0f0;
+    --light-grey: #e4e4e4;
+    --black: #111111;
+    --red: #ff0000;
+    --blue: #15f2fd;
+    --dark-grey: #272727;
+    --dark-opacity: 0;
+    --light-opacity: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.button-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    height: 5rem;
+    width: 100%;
+}
+
+.button {
+    padding: 5px;
+    margin: 5px;
+}
