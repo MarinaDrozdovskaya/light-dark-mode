@@ -1,49 +1,31 @@
-// the buttons that need refactoring
+// the buttons 
 
-let buttonFirst = document.getElementById('button-first');
-let buttonSecond = document.getElementById('button-second');
-let buttonThird = document.getElementById('button-third');
-let buttonForth = document.getElementById('button-forth');
+let optionButtons = document.querySelectorAll('.option-button');
+let optionContents = document.querySelectorAll('.option-content');
+
+for (let i = 0; i < optionButtons.length; i++) {
+  optionButtons[i].onclick = function() {
+    for (let j = 0; j < optionContents.length; j++) {
+      if (i === j) {
+        optionContents[j].classList.remove('hidden');
+      } else {
+        optionContents[j].classList.add('hidden');
+      }
+    }
+  }
+}
 
 let contentFirst = document.querySelector('.content-first');
 let contentSecond = document.querySelector('.content-second');
 let contentThird = document.querySelector('.content-third');
 let contentForth = document.querySelector('.content-forth');
 
-buttonFirst.onclick = function() {
-    contentFirst.classList.remove('hidden');
-    contentSecond.classList.add('hidden');
-    contentThird.classList.add('hidden');
-    contentForth.classList.add('hidden');
-}
-
-buttonSecond.onclick = function() {
-    contentFirst.classList.add('hidden');
-    contentSecond.classList.remove('hidden');
-    contentThird.classList.add('hidden');
-    contentForth.classList.add('hidden');
-}
-
-buttonThird.onclick = function() {
-    contentFirst.classList.add('hidden');
-    contentSecond.classList.add('hidden');
-    contentThird.classList.remove('hidden');
-    contentForth.classList.add('hidden');
-}
-
-buttonForth.onclick = function() {
-    contentFirst.classList.add('hidden');
-    contentSecond.classList.add('hidden');
-    contentThird.classList.add('hidden');
-    contentForth.classList.remove('hidden');
-}
 // the third option toggle
 
 let toggleThird = document.getElementById('toggle-third');
     toggleThird.onclick = function() {
         contentThird.classList.toggle("dark");
     };
-
 
 // the forth option
 
