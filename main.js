@@ -5,11 +5,14 @@ let optionContents = document.querySelectorAll('.option-content');
 
 for (let i = 0; i < optionButtons.length; i++) {
   optionButtons[i].onclick = function() {
+    
     for (let j = 0; j < optionContents.length; j++) {
       if (i === j) {
         optionContents[j].classList.remove('hidden');
+        optionButtons[j].disabled = true;
       } else {
         optionContents[j].classList.add('hidden');
+        optionButtons[j].disabled = false;
       }
     }
   }
